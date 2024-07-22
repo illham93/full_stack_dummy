@@ -3,7 +3,7 @@
 
 <% @articles.each do |article| %>
     <div>
-        <p><b><%= article[:title] %></b></p>
-        <p><%= article[:content] %></p>
+        <p class="title"><b><%= article[:title] %></b></p>
+        <p class="article"><%= article[:content] %></p>
     </div>
 <% end %>
