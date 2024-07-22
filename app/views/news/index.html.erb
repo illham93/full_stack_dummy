@@ -1,9 +1,11 @@
+<%= javascript_pack_tag 'news', 'data-turbolinks-track': 'reload' %>
+
 <h1>News</h1>
 <a href="/">home</a>
 
 <% @articles.each do |article| %>
     <div>
         <p class="title"><b><%= article[:title] %></b></p>
-        <p class="article"><%= article[:content] %></p>
+        <p class="article p-2 bg-light my-2"><%= article[:content] %></p>
     </div>
 <% end %>
