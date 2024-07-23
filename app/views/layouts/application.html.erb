@@ -20,6 +20,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <% if content_for? :head %>
+      <%= yield :head %>
+    <% else %>
+      <title>FullStackDummy</title>
+      <meta name="description" content="A dummy full-stack application for testing" />
+    <% end %>
   </head>
 
   <body class="<%= controller_name %> <%= action_name%>">
